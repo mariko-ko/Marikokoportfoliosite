@@ -50,10 +50,10 @@ function parseText(text: string) {
     }
     
     return (
-      <React.Fragment key={lineIndex}>
+      <span key={lineIndex}>
         {parts.length > 0 ? parts : line}
         {lineIndex < lines.length - 1 && <br />}
-      </React.Fragment>
+      </span>
     );
   });
 }
@@ -154,11 +154,13 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                  className="cursor-pointer"
+                  onClick={() => setSelectedImage(imgSrc)}
                 >
                   <ImageWithFallback
                     src={imgSrc}
                     alt={`${project.title} illustration ${index + 1}`}
-                    className="w-full h-auto"
+                    className="w-full h-auto hover:opacity-90 transition-opacity"
                   />
                 </motion.div>
               ))}
@@ -177,12 +179,13 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                    className={sizeClass}
+                    className={`${sizeClass} cursor-pointer`}
+                    onClick={() => setSelectedImage(imgSrc)}
                   >
                     <ImageWithFallback
                       src={imgSrc}
                       alt={`${project.title} illustration ${index + 1}`}
-                      className="w-full h-auto"
+                      className="w-full h-auto hover:opacity-90 transition-opacity"
                     />
                   </motion.div>
                 );
@@ -708,7 +711,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                             </tbody>
                           </table>
                           {section.fullWidthTable.description && (
-                            <p className="text-xs text-gray-500 mt-3">
+                            <p className="mt-3 text-[16px] text-[#4a5565]">
                               {section.fullWidthTable.description}
                             </p>
                           )}
