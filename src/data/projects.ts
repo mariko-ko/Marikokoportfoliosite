@@ -1,12 +1,9 @@
 import kpiDiagram from "figma:asset/79754285c45e2ee451dd8f2be25f72348f3dc85d.png";
 import calendarPrototypingUI from "figma:asset/1755c3c30f1020375e8e08ac65b7f11e8eb9a881.png";
 import calendarUIDesignSample1Static from "figma:asset/3874c490567d692b8291ce061a861b930904c245.png";
-import calendarUIDesignSample1Gif from "figma:asset/8e5a956e91dfaab90e56f0f49ca488ab5c423835.png";
 import calendarUIDesignSample2Static from "figma:asset/6943cee9e76440519a0550761b4310b38f9e621e.png";
-// calendarUIDesignSample2Gif is now a Google Drive URL
 import calendarPrototypingResearch from "figma:asset/ad10cc9f5d7f2d55255301cb3617d9831900846d.png";
 import calendarPurposeImage from "figma:asset/7ad54b1788856629b8d0b736e39d203bccfa6713.png";
-
 import { Project } from "../types/project";
 import project3Image from "figma:asset/5fb3fb21f45e44a6a4511d7a6edede72f65a1fe4.png";
 import project2Image from "figma:asset/ddaf9016a36f4d36d72aac91ee0942aa796cde6f.png";
